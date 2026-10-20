@@ -1,0 +1,266 @@
+/* ==========================================================================
+   GlowRoutine — base.css
+   Дизайн-токени (змінні), скидання стилів, типографіка, утиліти.
+   Підключається першим; значення береться з дизайн-системи (ЛР №2).
+   ========================================================================== */
+
+/* 1. Дизайн-токени ------------------------------------------------------- */
+:root {
+  /* Кольори: акцент (rose) */
+  --rose-100: #fbe9e6;
+  --rose-500: #ce655f;
+  --rose-700: #a23d3a;
+
+  /* Кольори: природний (sage) */
+  --sage: #dfe9dd;
+  --sage-dark: #526b50;
+
+  /* Нейтральні */
+  --cream: #faf8f5;
+  --neutral-50: #fcfbfa;
+  --neutral-100: #f5f2ee;
+  --neutral-200: #e5e0da;
+  --neutral-500: #77716b;
+  --neutral-600: #5f5954;
+  --neutral-900: #221f1d;
+  --white: #fff;
+
+  /* Службові (статуси) */
+  --success: #356442;
+  --warning: #9a671e;
+  --warning-bg: #fff1d9;
+  --error: #b63c3c;
+  --star: #c88927;
+  --muted-on-dark: #bbb3ac;
+
+  /* Типографіка */
+  --font-main: "Manrope", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-accent: Georgia, serif;
+
+  /* Форма й тіні */
+  --radius: 16px;
+  --radius-sm: 12px;
+  --shadow: 0 12px 40px rgba(48, 36, 30, 0.08);
+
+  /* Сітка */
+  --container: 1280px;
+  --gutter: max(24px, calc((100vw - var(--container)) / 2));
+}
+
+/* 2. Скидання -------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--neutral-900);
+  background: var(--neutral-50);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd, figure {
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--rose-500);
+  outline-offset: 2px;
+}
+
+/* 3. Типографіка ------------------------------------------------------------ */
+.heading {
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.heading-1 { font-size: 40px; line-height: 1.2; }
+.heading-2 { font-size: 32px; line-height: 1.25; }
+.heading-3 { font-size: 24px; line-height: 1.34; }
+
+.text {
+  color: var(--neutral-600);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--rose-700);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* 4. Іконки (SVG-спрайт) --------------------------------------------------- */
+.sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-xs { width: 14px; height: 14px; }
+.icon-sm { width: 16px; height: 16px; }
+.icon-md { width: 18px; height: 18px; }
+.icon-lg { width: 32px; height: 32px; }
+.icon-xl { width: 36px; height: 36px; }
+
+/* 5. Утиліти --------------------------------------------------------------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--neutral-900);
+  color: var(--white);
+  font-size: 13px;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* Ширина смужок прогресу (замість inline-стилів) */
+.w-14 { width: 14%; }
+.w-48 { width: 48%; }
+.w-66 { width: 66%; }
+
+/* 6. Секції -------------------------------------------------------------------- */
+.section {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 88px 0;
+}
+
+.section-head,
+.content-head,
+.routine-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 34px;
+}
+
+.section-head .heading {
+  margin-top: 7px;
+}
+
+.tinted {
+  max-width: none;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  background: var(--cream);
+}
+
+.link-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.link-more:hover {
+  color: var(--rose-700);
+}
+
+/* 7. Адаптивність -------------------------------------------------------------- */
+/* Планшет */
+@media (max-width: 1100px) {
+  .section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Мобільний */
+@media (max-width: 760px) {
+  .heading-1 { font-size: 34px; }
+  .heading-2 { font-size: 28px; }
+  .heading-3 { font-size: 21px; }
+
+  .section {
+    padding: 60px 16px;
+  }
+
+  .tinted {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section-head {
+    align-items: flex-start;
+  }
+
+  .section-head .link-more {
+    display: none;
+  }
+}

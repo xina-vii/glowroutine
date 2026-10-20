@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ваша рутина — GlowRoutine</title>
+  <meta name="description" content="Результат Beauty Quiz: персональна ранкова та вечірня рутина догляду.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 13H5L6 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 3 1.2 4.1L17 9l-3.8 1.9L12 15l-1.2-4.1L7 9l3.8-1.9L12 3Z"/><path d="m19 15 .7 2.3L22 18l-2.3.7L19 21l-.7-2.3L16 18l2.3-.7L19 15Z"/></symbol><symbol id="i-leaf" viewBox="0 0 24 24"><path d="M4 20c8 0 14-5 16-16C9 5 4 10 4 20Z"/><path d="M4 20c4-5 8-8 13-11"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-5"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 5h11v11H3zM14 9h4l3 3v4h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol><symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol><symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"/><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"/></symbol><symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 14h8l1-14"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h4l2-3h4l2 3h4v11H4z"/><circle cx="12" cy="13" r="3"/></symbol></svg>
+<a class="skip-link" href="#main">Перейти до змісту</a>
+<p class="announcement">Безкоштовна доставка від 1 500 ₴ · Подарунок до першого замовлення</p>
+<header class="navbar">
+  <input class="nav-toggle visually-hidden" type="checkbox" id="nav-toggle" aria-label="Відкрити меню">
+  <label class="mobile-icon" for="nav-toggle"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-menu"></use></svg><span class="visually-hidden">Меню</span></label>
+  <a class="logo" href="index.html">Glow<span>Routine</span></a>
+  <nav class="nav-links" aria-label="Головна навігація">
+    <a href="catalog.html">Каталог</a>
+    <a href="quiz.html" class="active" aria-current="page">Beauty Quiz</a>
+    <a href="account.html">Б’юті-поличка</a>
+    <a href="index.html#benefits">Про нас</a>
+  </nav>
+  <div class="nav-actions">
+    <a class="nav-search" href="catalog.html" aria-label="Пошук"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg></a>
+    <a href="account.html" aria-label="Обране"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-heart"></use></svg></a>
+    <a class="cart-icon" href="cart.html" aria-label="Кошик, 1 товар"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-bag"></use></svg><span>1</span></a>
+    <a class="nav-user" href="account.html" aria-label="Особистий кабінет"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-user"></use></svg></a>
+  </div>
+</header>
+<main id="main">
+  <section class="result-hero" aria-labelledby="res-title">
+    <span class="result-icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sparkle"></use></svg></span>
+    <span class="eyebrow">Ваш результат готовий</span>
+    <h1 class="heading heading-1" id="res-title">Рутина для спокійної,<br> зволоженої шкіри</h1>
+    <p class="text">Ми врахували комбінований тип, чутливість і вашу ціль — здорове сяйво.</p>
+    <ul class="profile-chips"><li>Комбінована</li><li>Чутлива</li><li>Зневоднення</li></ul>
+  </section>
+  <section class="section routine-section" aria-labelledby="routine-title">
+    <input class="visually-hidden" type="radio" name="when" id="when-am" checked>
+    <input class="visually-hidden" type="radio" name="when" id="when-pm">
+    <div class="routine-title">
+      <div><span class="eyebrow">4 прості кроки</span><h2 class="heading heading-2" id="routine-title">Ваша щоденна рутина</h2></div>
+      <div class="day-toggle"><label for="when-am">Ранок</label><label for="when-pm">Вечір</label></div>
+    </div>
+    <ul class="routine-list" id="routine-am"><li class="routine-card"><span class="step-num">01</span><img src="https://images.unsplash.com/photo-1667266543254-505cf5b16ec4?auto=format&fit=crop&w=600&q=85" alt="" loading="lazy" width="600" height="440"><div><small>Очищення</small><b>Glow Serum Propolis + Niacinamide</b><span>Beauty of Joseon</span></div><strong>720 ₴</strong><span class="fit"><svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> 98% match</span></li><li class="routine-card"><span class="step-num">02</span><img src="https://images.unsplash.com/photo-1585652757141-8837d676fac8?auto=format&fit=crop&w=600&q=85" alt="" loading="lazy" width="600" height="440"><div><small>Тонізація</small><b>1025 Dokdo Cleanser</b><span>Round Lab</span></div><strong>590 ₴</strong><span class="fit"><svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> 96% match</span></li><li class="routine-card"><span class="step-num">03</span><img src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?auto=format&fit=crop&w=600&q=85" alt="" loading="lazy" width="600" height="440"><div><small>Зволоження</small><b>Vegan Kombucha Tea Essence</b><span>Dr. Ceuracle</span></div><strong>1 190 ₴</strong><span class="fit"><svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> 94% match</span></li><li class="routine-card"><span class="step-num">04</span><img src="https://images.unsplash.com/photo-1638609927252-9982beed7af8?auto=format&fit=crop&w=600&q=85" alt="" loading="lazy" width="600" height="440"><div><small>SPF</small><b>Oat-in Calming Gel Cream</b><span>Purito</span></div><strong>760 ₴</strong><span class="fit"><svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> 92% match</span></li></ul>
+    <ul class="routine-list" id="routine-pm"><li class="routine-card"><span class="step-num">01</span><img src="https://images.unsplash.com/photo-1667266543254-505cf5b16ec4?auto=format&fit=crop&w=600&q=85" alt="" loading="lazy" width="600" height="440"><div><small>Очищення</small><b>Glow Serum Propolis + Niacinamide</b><span>Beauty of Joseon</span></div><strong>720 ₴</strong><span class="fit"><svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> 98% match</span></li><li class="routine-card"><span class="step-num">02</span><img src="https://images.unsplash.com/photo-1585652757141-8837d676fac8?auto=format&fit=crop&w=600&q=85" alt="" loading="lazy" width="600" height="440"><div><small>Тонізація</small><b>1025 Dokdo Cleanser</b><span>Round Lab</span></div><strong>590 ₴</strong><span class="fit"><svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> 96% match</span></li><li class="routine-card"><span class="step-num">03</span><img src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?auto=format&fit=crop&w=600&q=85" alt="" loading="lazy" width="600" height="440"><div><small>Активна сироватка</small><b>Vegan Kombucha Tea Essence</b><span>Dr. Ceuracle</span></div><strong>1 190 ₴</strong><span class="fit"><svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> 94% match</span></li><li class="routine-card"><span class="step-num">04</span><img src="https://images.unsplash.com/photo-1638609927252-9982beed7af8?auto=format&fit=crop&w=600&q=85" alt="" loading="lazy" width="600" height="440"><div><small>Відновлення</small><b>Oat-in Calming Gel Cream</b><span>Purito</span></div><strong>760 ₴</strong><span class="fit"><svg class="icon icon-xs" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg> 92% match</span></li></ul>
+    <div class="routine-total">
+      <p><small>Вартість рутини</small><b>3 260 ₴</b><span>Економія у наборі 380 ₴</span></p>
+      <a class="btn btn-primary" href="cart.html"><svg class="icon icon-md" aria-hidden="true" focusable="false"><use href="#i-bag"></use></svg> Додати всю рутину в кошик</a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-col">
+    <a class="logo light" href="index.html">Glow<span>Routine</span></a>
+    <p class="text">Догляд, який розуміє вашу шкіру.</p>
+  </div>
+  <nav class="footer-col" aria-label="Покупцям">
+    <h2 class="footer-title">Покупцям</h2>
+    <a href="catalog.html">Каталог</a>
+    <a href="quiz.html">Beauty Quiz</a>
+    <a href="#">Доставка й оплата</a>
+  </nav>
+  <nav class="footer-col" aria-label="GlowRoutine">
+    <h2 class="footer-title">GlowRoutine</h2>
+    <a href="index.html#benefits">Про нас</a>
+    <a href="#">Контакти</a>
+    <a href="#">Instagram</a>
+  </nav>
+  <div class="footer-col">
+    <h2 class="footer-title">Будьмо на зв’язку</h2>
+    <p class="text">Новинки, гіди та чесні поради — без спаму.</p>
+    <form class="footer-input" action="index.html" method="get">
+      <input type="email" name="email" aria-label="Email" placeholder="Ваш email" required>
+      <button type="submit" aria-label="Підписатися"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg></button>
+    </form>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,754 @@
+/* ==========================================================================
+   GlowRoutine — components.css
+   Повторно використовувані компоненти дизайн-системи:
+   кнопки, шапка, підвал, картка товару, форми, модальне вікно тощо.
+   ========================================================================== */
+
+/* 1. Кнопки -------------------------------------------------------------------- */
+.btn {
+  min-height: 50px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(48, 36, 30, 0.12);
+}
+
+.btn:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-primary { background: var(--rose-500); color: var(--white); }
+.btn-primary:hover { background: var(--rose-700); }
+.btn-secondary { background: var(--white); color: var(--neutral-900); border-color: var(--neutral-200); }
+.btn-ghost { background: transparent; color: var(--neutral-900); border-color: var(--neutral-200); }
+.btn-block { width: 100%; }
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* 2. Шапка сайту ------------------------------------------------------------------ */
+.announcement {
+  padding: 8px 16px;
+  background: var(--neutral-900);
+  color: var(--white);
+  text-align: center;
+  font-size: 12px;
+}
+
+.navbar {
+  position: relative;
+  z-index: 20;
+  height: 72px;
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  background: rgba(252, 251, 250, 0.95);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.logo {
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.logo span { color: var(--rose-500); }
+.logo.light { color: var(--white); }
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a,
+.nav-actions a {
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.nav-links a { color: var(--neutral-600); }
+.nav-links a:hover,
+.nav-links a.active { color: var(--neutral-900); }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cart-icon { position: relative; }
+
+.cart-icon span {
+  position: absolute;
+  top: 0;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--rose-500);
+  color: var(--white);
+  font-size: 9px;
+}
+
+/* Кнопка мобільного меню: чекбокс + label (без JavaScript) */
+.mobile-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-toggle:focus-visible + .mobile-icon {
+  outline: 2px solid var(--rose-500);
+  outline-offset: 4px;
+}
+
+/* 3. Підвал ---------------------------------------------------------------------------- */
+.site-footer {
+  padding: 64px var(--gutter);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 50px;
+  background: var(--neutral-900);
+  color: var(--white);
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.site-footer .text {
+  max-width: 280px;
+  color: var(--muted-on-dark);
+  font-size: 13px;
+}
+
+.footer-col > a:not(.logo) {
+  color: var(--muted-on-dark);
+  font-size: 13px;
+}
+
+.footer-col > a:not(.logo):hover { color: var(--white); }
+
+.footer-input {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #68615c;
+}
+
+.footer-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: var(--white);
+}
+
+.footer-input button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--white);
+}
+
+/* 4. Хлібні крихти --------------------------------------------------------------------- */
+.breadcrumbs {
+  margin-bottom: 28px;
+  color: var(--neutral-500);
+  font-size: 12px;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumbs li + li::before {
+  content: "/";
+  margin-right: 10px;
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: var(--neutral-900);
+  font-weight: 700;
+}
+
+.breadcrumbs a:hover { color: var(--neutral-900); }
+
+/* 5. Картка товару ---------------------------------------------------------------------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product-card { min-width: 0; }
+
+.product-media { position: relative; }
+
+.product-image {
+  position: relative;
+  display: block;
+  aspect-ratio: 0.82;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--neutral-100);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.product-card:hover .product-image img { transform: scale(1.035); }
+
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.wish {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.wish.active {
+  background: var(--rose-500);
+  color: var(--white);
+}
+
+.product-info {
+  display: block;
+  padding: 14px 2px;
+}
+
+.product-info small,
+.product-info b,
+.product-info strong {
+  display: block;
+}
+
+.product-info small {
+  color: var(--neutral-500);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.product-info b {
+  min-height: 48px;
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.product-info strong {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.stars span {
+  color: var(--star);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.stars small {
+  color: var(--neutral-500);
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* 6. Форми --------------------------------------------------------------------------------- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--neutral-200);
+  border-radius: 10px;
+  outline: 0;
+  background: var(--white);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--rose-500);
+  box-shadow: 0 0 0 3px var(--rose-100);
+}
+
+.field textarea { resize: vertical; }
+
+/* Чекбокс-фільтр: прихований input + візуальний квадрат */
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  color: var(--neutral-600);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.check-box {
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--neutral-200);
+  border-radius: 4px;
+  color: transparent;
+}
+
+.check input:checked + .check-box {
+  background: var(--rose-500);
+  border-color: var(--rose-500);
+  color: var(--white);
+}
+
+.check input:focus-visible + .check-box {
+  outline: 2px solid var(--rose-500);
+  outline-offset: 2px;
+}
+
+/* Радіо-картки (доставка, оплата) */
+.choice { display: block; cursor: pointer; }
+
+.choice-card {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  align-items: center;
+  gap: 3px 8px;
+  min-height: 56px;
+  padding: 12px;
+  border: 1px solid var(--neutral-200);
+  border-radius: 11px;
+  background: var(--white);
+  font-size: 12px;
+}
+
+.choice-card small {
+  grid-column: 2;
+  color: var(--neutral-500);
+  font-size: 10px;
+}
+
+.radio {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--neutral-200);
+  border-radius: 50%;
+}
+
+.choice input:checked + .choice-card {
+  border-color: var(--rose-500);
+  background: #fffafa;
+}
+
+.choice input:checked + .choice-card .radio { border: 5px solid var(--rose-500); }
+.choice input:focus-visible + .choice-card { outline: 2px solid var(--rose-500); outline-offset: 2px; }
+
+/* Варіанти відповідей квізу */
+.option { display: block; cursor: pointer; }
+
+.option-card {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--neutral-200);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: left;
+  transition: 0.2s;
+}
+
+.option-card b { font-size: 13px; }
+
+.option-card .letter {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--neutral-100);
+  color: var(--neutral-500);
+  font-size: 11px;
+}
+
+.option-card .icon {
+  margin-left: auto;
+  color: var(--rose-500);
+  visibility: hidden;
+}
+
+.option input:checked + .option-card {
+  border-color: var(--rose-500);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.option input:checked + .option-card .letter {
+  background: var(--rose-500);
+  color: var(--white);
+}
+
+.option input:checked + .option-card .icon { visibility: visible; }
+.option input:focus-visible + .option-card { outline: 2px solid var(--rose-500); outline-offset: 2px; }
+
+/* 7. Чипи й теги ------------------------------------------------------------------------------ */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--rose-100);
+  color: var(--rose-700);
+  font-size: 11px;
+}
+
+.profile-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.profile-chips li {
+  padding: 7px 12px;
+  border: 1px solid var(--neutral-200);
+  border-radius: 999px;
+  background: var(--white);
+  font-size: 11px;
+}
+
+/* 8. Підсумок замовлення (кошик, оформлення) --------------------------------------------------- */
+.summary {
+  position: sticky;
+  top: 20px;
+  padding: 26px;
+  border-radius: var(--radius);
+  background: var(--cream);
+}
+
+.summary .heading { margin-bottom: 22px; }
+
+.sum-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 13px 0;
+  font-size: 12px;
+}
+
+.sum-row.grand { font-size: 15px; }
+.sum-row.grand b { font-size: 22px; }
+
+.summary hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid var(--neutral-200);
+}
+
+.summary .btn { margin-top: 12px; }
+
+.secure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 12px;
+  color: var(--neutral-500);
+  text-align: center;
+  font-size: 9px;
+}
+
+.promo {
+  display: flex;
+  margin: 20px 0;
+}
+
+.promo input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--neutral-200);
+  border-radius: 9px 0 0 9px;
+  background: var(--white);
+}
+
+.promo button {
+  padding: 0 12px;
+  border: 0;
+  border-radius: 0 9px 9px 0;
+  background: var(--neutral-900);
+  color: var(--white);
+  font-size: 10px;
+}
+
+.mini-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mini-product img {
+  width: 58px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.mini-product span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mini-product b { font-size: 11px; }
+.mini-product small { color: var(--neutral-500); font-size: 9px; }
+
+/* 9. Порожній стан і індикатор успіху ----------------------------------------------------------- */
+.empty-state {
+  min-height: 430px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: var(--radius);
+  background: var(--cream);
+}
+
+.empty-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--rose-100);
+  color: var(--rose-700);
+}
+
+.empty-state .heading { margin: 20px 0 8px; }
+.empty-state .btn { margin-top: 24px; }
+
+.success-mark,
+.result-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--rose-700);
+  box-shadow: var(--shadow);
+}
+
+.success-mark {
+  background: var(--sage);
+  color: var(--success);
+}
+
+/* 10. Модальне вікно (відкривається через :target, без JavaScript) -------------------------------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  place-items: center;
+  padding: 20px;
+  background: rgba(20, 18, 17, 0.55);
+}
+
+.modal-backdrop:target { display: grid; }
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  cursor: default;
+}
+
+.modal {
+  position: relative;
+  width: min(100%, 460px);
+  padding: 36px;
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal .heading { margin: 7px 0; }
+.modal > .text { margin-bottom: 24px; }
+
+.modal-note {
+  display: block;
+  margin-top: 10px;
+  color: var(--neutral-500);
+  text-align: center;
+  font-size: 10px;
+}
+
+/* 11. Адаптивність компонентів ----------------------------------------------------------------------- */
+/* Планшет */
+@media (max-width: 1100px) {
+  .navbar { gap: 28px; }
+  .nav-links { gap: 22px; }
+}
+
+@media (max-width: 900px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .product-grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .site-footer { grid-template-columns: 1fr 1fr; gap: 40px 30px; }
+  .site-footer .footer-col:first-child,
+  .site-footer .footer-col:last-child { grid-column: 1 / -1; }
+  .footer-col:last-child .footer-input { max-width: 420px; }
+}
+
+/* Мобільний */
+@media (max-width: 760px) {
+  .announcement { font-size: 9px; }
+
+  .navbar {
+    height: 62px;
+    padding: 0 16px;
+    gap: 14px;
+    justify-content: space-between;
+  }
+
+  .mobile-icon { display: block; }
+  .navbar .logo { flex: 1; }
+
+  .nav-links {
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 18px;
+    background: var(--white);
+    border-bottom: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-toggle:checked ~ .nav-links { display: flex; }
+  .nav-links a { padding: 12px; }
+
+  .nav-actions { gap: 12px; }
+  .nav-search,
+  .nav-user { display: none; }
+
+  /* Каруселі карток: горизонтальна прокрутка зі «снепом» */
+  .product-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    margin-right: -16px;
+    padding-right: 16px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .product-card {
+    flex: none;
+    min-width: 72vw;
+    scroll-snap-align: start;
+  }
+
+  .site-footer {
+    padding: 50px 20px;
+    gap: 35px 20px;
+  }
+
+  .modal { padding: 28px 22px; }
+  .empty-state { min-height: 340px; padding: 28px 20px; }
+  .summary { position: static; }
+}

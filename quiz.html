@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beauty Quiz — крок 1 — GlowRoutine</title>
+  <meta name="description" content="Beauty Quiz: відповідайте на питання про шкіру й отримайте персональну рутину.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="page-quiz">
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/></symbol><symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l1 13H5L6 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol><symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 3 1.2 4.1L17 9l-3.8 1.9L12 15l-1.2-4.1L7 9l3.8-1.9L12 3Z"/><path d="m19 15 .7 2.3L22 18l-2.3.7L19 21l-.7-2.3L16 18l2.3-.7L19 15Z"/></symbol><symbol id="i-leaf" viewBox="0 0 24 24"><path d="M4 20c8 0 14-5 16-16C9 5 4 10 4 20Z"/><path d="M4 20c4-5 8-8 13-11"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-5"/></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 5h11v11H3zM14 9h4l3 3v4h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol><symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol><symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"/><path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1"/></symbol><symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol><symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 14h8l1-14"/></symbol><symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h4l2-3h4l2 3h4v11H4z"/><circle cx="12" cy="13" r="3"/></symbol></svg>
+<main id="main" class="quiz-page">
+  <header class="quiz-top">
+    <a class="logo" href="index.html">Glow<span>Routine</span></a>
+    <a class="quiz-close" href="index.html" aria-label="Закрити тест"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg></a>
+  </header>
+  <form class="quiz-shell" action="result.html" method="get">
+    <div class="progress-meta"><span>Крок 1 з 7</span><span>14%</span></div>
+    <div class="progress" role="progressbar" aria-label="Прогрес тесту" aria-valuemin="0" aria-valuemax="100" aria-valuenow="14"><i class="w-14"></i></div>
+    <fieldset class="quiz-content">
+      <legend class="visually-hidden">Який у вас тип шкіри?</legend>
+      <span class="eyebrow">Ваш профіль шкіри</span>
+      <h1 class="heading heading-1">Який у вас тип шкіри?</h1>
+      <p class="text">Оберіть варіант, який найкраще описує відчуття шкіри протягом дня.</p>
+      <div class="quiz-options"><label class="option"><input class="visually-hidden" type="radio" name="skin" value="Суха" required><span class="option-card"><span class="letter">A</span><b>Суха</b><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg></span></label><label class="option"><input class="visually-hidden" type="radio" name="skin" value="Жирна" required><span class="option-card"><span class="letter">B</span><b>Жирна</b><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg></span></label><label class="option"><input class="visually-hidden" type="radio" name="skin" value="Комбінована" required><span class="option-card"><span class="letter">C</span><b>Комбінована</b><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg></span></label><label class="option"><input class="visually-hidden" type="radio" name="skin" value="Нормальна" required><span class="option-card"><span class="letter">D</span><b>Нормальна</b><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg></span></label><label class="option"><input class="visually-hidden" type="radio" name="skin" value="Не знаю" required><span class="option-card"><span class="letter">E</span><b>Не знаю</b><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg></span></label></div>
+      <div class="quiz-actions">
+        <button class="btn btn-ghost" type="button" disabled>← Назад</button>
+        <button class="btn btn-primary" type="submit">Далі <svg class="icon icon-md" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg></button>
+      </div>
+    </fieldset>
+  </form>
+</main>
+</body>
+</html>
